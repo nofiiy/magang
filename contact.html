@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - EduTech</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #8A2BE2, #6EC1E4); /* Purple to pastel blue gradient */
+        }
+
+        .navbar {
+            margin-bottom: 20px;
+        }
+
+        .banner {
+            background: none;
+            height: 150px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+
+        .banner h1, .banner p {
+            color: #ffffff;
+            font-size: 2rem;
+            font-weight: bold;
+            white-space: normal;
+            overflow: visible;
+            width: auto;
+            margin: 0;
+            padding: 0;
+            line-height: 1.2;
+        }
+
+        .banner p {
+            margin-top: 5px;
+        }
+
+        .btn-signin {
+            border: 2px solid white; /* Memberikan border putih */
+            color: white;
+            padding: 6px 18px;
+            border-radius: 4px;
+            background-color: transparent; /* Menghapus latar belakang */
+        }
+
+        .btn-signin:hover {
+            background-color: rgba(255, 255, 255, 0.1); /* Efek latar belakang sedikit saat hover */
+            color: white;
+        }
+
+        .contact-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin: 40px auto;
+            max-width: 1200px;
+            padding: 20px;
+        }
+
+        .contact-form {
+            width: 48%; /* Adjusting form width */
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-form h2 {
+            font-size: 2rem;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .contact-form .form-group {
+            margin-bottom: 15px;
+        }
+
+        .contact-form label {
+            font-size: 1.1rem;
+            color: #333;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .contact-form button {
+            background-color: #6EC1E4;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .contact-form button:hover {
+            background-color: #4fa3c1;
+        }
+
+        .map-container {
+            width: 48%; /* Adjusting map width */
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 400px; /* Fix height for map */
+            border-radius: 8px;
+            border: 0;
+        }
+
+        .success-message {
+            color: green;
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        footer {
+            margin-top: 20px;
+            padding: 5px; /* Mengurangi padding untuk mengurangi tinggi footer */
+            font-size: 0.8rem; /* Mengurangi ukuran font untuk teks di footer */
+        }
+
+        footer p {
+            margin-bottom: 2px; /* Mengurangi jarak antar elemen teks */
+        }
+
+        footer a {
+            margin-right: 2px; /* Mengurangi jarak antar link di footer */
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">EduTech</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="courses.html">Courses</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="btn btn-signin" href="login.html">Sign In</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Banner -->
+    <header class="banner text-center text-white">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <p>Contact Us for More Information</p>
+        </div>
+    </header>
+
+    <!-- Contact Form Section -->
+    <section class="contact-section">
+        <!-- Contact Form -->
+        <div class="contact-form">
+            <h2>Contact Form</h2>
+            <form id="contactForm" action="submit_form.php" method="POST">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" class="form-control" rows="4" required></textarea>
+                </div>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+
+        <!-- Google Map -->
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1984.6572192495532!2d106.79508502898943!3d-6.1997355424093475!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6991a8b5b59f7d%3A0x85c8f960aa20a634!2sJl.%20Merdeka%20No.1%2C%20Jakarta%2C%20Indonesia!5e0!3m2!1sen!2sus!4v1632766010031" 
+                    allowfullscreen="" loading="lazy"></iframe>
+            <div class="mt-4 text-center">
+                <h3 class="text-xl font-semibold text-blue-600">Our Office Location - Jakarta</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p>Contact us: info@edutech.com | +62 812 3456 7890 | Jakarta, Indonesia</p>
+        <p>Follow us on:
+            <a href="#" class="text-white">Facebook</a> |
+            <a href="#" class="text-white">Twitter</a> |
+            <a href="#" class="text-white">Instagram</a>
+        </p>
+        <p>&copy; 2025 EduTech. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Contact Form Validation and Handling
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent the form from submitting
+
+            let name = document.getElementById("name").value.trim();
+            let email = document.getElementById("email").value.trim();
+            let message = document.getElementById("message").value.trim();
+
+            // Validation to check if fields are empty
+            if (name === "" || email === "" || message === "") {
+                alert("All fields must be filled!");
+                return;
+            }
+
+            // Basic email validation
+            let emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+            if (!emailPattern.test(email)) {
+                alert("Please enter a valid email address.");
+                return;
+            }
+
+            // Show success message
+            document.getElementById("successMessage").style.display = "block";
+
+            // Clear form fields after submission
+            document.getElementById("name").value = "";
+            document.getElementById("email").value = "";
+            document.getElementById("message").value = "";
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

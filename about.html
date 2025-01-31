@@ -1,0 +1,148 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - EduTech</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #8A2BE2, #6EC1E4); /* Purple to pastel blue gradient */
+        }
+
+        .navbar {
+            margin-bottom: 20px;
+        }
+
+        .banner {
+            background: none;
+            height: 150px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+
+        .banner h1, .banner p {
+            color: #ffffff;
+            font-size: 2rem;
+            font-weight: bold;
+            white-space: nowrap;
+            overflow: visible; /* Ensure text isn't cut off */
+            width: auto; /* Ensure the width adjusts automatically */
+            margin: 0;
+            padding: 0;
+            line-height: 1.2;
+        }
+
+        .banner p {
+            margin-top: 5px;
+        }
+
+        .btn-signin {
+            border: 2px solid white; /* Memberikan border putih */
+            color: white;
+            padding: 6px 18px;
+            border-radius: 4px;
+            background-color: transparent; /* Menghapus latar belakang */
+        }
+
+        .btn-signin:hover {
+            background-color: rgba(255, 255, 255, 0.1); /* Efek latar belakang sedikit saat hover */
+            color: white;
+        }
+
+        .content-section {
+            margin: 40px auto;
+            width: 80%;
+            text-align: justify;
+            background-color: white;  /* White background */
+            padding: 20px;  /* Adding padding for spacing inside the box */
+            border-radius: 10px;  /* Making the corners of the box more rounded */
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Adding slight shadow to the box */
+        }
+
+        .content-section h2 {
+            font-size: 2rem;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .content-section p {
+            font-size: 1.1rem;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        footer {
+            margin-top: 20px;
+            padding: 5px; /* Mengurangi padding untuk mengurangi tinggi footer */
+            font-size: 0.8rem; /* Mengurangi ukuran font untuk teks di footer */
+        }
+
+        footer p {
+            margin-bottom: 2px; /* Mengurangi jarak antar elemen teks */
+        }
+
+        footer a {
+            margin-right: 2px; /* Mengurangi jarak antar link di footer */
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">EduTech</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="courses.html">Courses</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="btn btn-signin" href="login.html">Sign In</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Banner -->
+    <header class="banner text-center text-white">
+        <div class="container">
+            <h1>About Us</h1>
+            <p>Learn More About Our Company</p>
+        </div>
+    </header>
+
+    <!-- About Content Section -->
+    <section class="content-section">
+        <h2>EduTech</h2>
+        <p>EduTech is a leading online education platform aimed at providing affordable and high-quality learning opportunities to individuals worldwide. Founded in 2015, EduTech was born out of the need to bridge the gap in educational access, particularly for those facing geographic, financial, or time constraints. We offer a wide range of online courses in technology, business, design, and other areas to help learners enhance their skills and strengthen their careers.</p>
+
+        <p>Our vision is to make education accessible to anyone, anytime, and anywhere. We strive to empower learners by providing the tools and knowledge they need to succeed in their personal and professional lives. Through the courses we offer, learners can interact with experienced instructors, participate in hands-on projects, and earn certificates that can boost their credibility in the job market.</p>
+
+        <h3>Our Mission</h3>
+        <p>Our mission is to revolutionize education by creating a flexible and affordable learning platform that meets the diverse needs of learners. EduTech aims to build a lifelong learning community equipped with the skills and confidence to thrive in a rapidly changing world. We are committed to providing up-to-date and relevant content, as well as an interactive and engaging learning experience.</p>
+
+        <h3>Our Vision</h3>
+        <p>We envision a world where education is not limited by location, age, or income. EduTech is committed to eliminating barriers to education by offering a flexible and dynamic platform that can meet the needs of learners wherever they are. We believe that knowledge is power, and by democratizing access to knowledge, we can help create a more informed and innovative society.</p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p>Contact us: info@edutech.com | +62 812 3456 7890 | Jakarta, Indonesia</p>
+        <p>Follow us on:
+            <a href="#" class="text-white">Facebook</a> |
+            <a href="#" class="text-white">Twitter</a> |
+            <a href="#" class="text-white">Instagram</a>
+        </p>
+        <p>&copy; 2025 EduTech. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
